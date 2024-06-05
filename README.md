@@ -4,7 +4,8 @@ Mini Wireguard Server
 The configuration below turns a small Mikrotik router e.g. an RB951Ui-2nD hAP
 into a cheap, easy to deploy, low power Wireguard server. I think it could be
 useful in some scenarios, where no other options are available, e.g. the actual
-router is not wireguard or other VPN capable, and you do not want to replace it.
+router is not wireguard or other VPN capable, and you do not want to replace it
+for some reason.
 
 Apply this config to a small Mikrotik router, connect it to your actual router
 with just one cable and you are good to go.
