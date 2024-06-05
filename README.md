@@ -1,17 +1,17 @@
-
 Mini Wireguard Server
 
 The configuration below turns a small Mikrotik router e.g. an RB951Ui-2nD hAP
 into a cheap, easy to deploy, low power Wireguard server. I think it could be
 useful in some scenarios, where no other options are available, e.g. the actual
-router is not wireguard or other VPN capable, and you do not want to replace it
+router is not Wireguard or other VPN capable, and you do not want to replace it
 for some reason.
 
-Configure a remote "road warrior" device (notebook or PC), apply this config to
-a small Mikrotik router, connect it to your actual router with just one cable, 
-and you are good to go.
+Configure a remote device (client), apply this config to a small Mikrotik
+router, connect it to your actual router with just one cable, and you are good
+to go. I will not dive into the details of configuring clients nor creating
+port forward rules on your existing devices.
 
-I refer to this new router as "server" or "Wireguard server" in the text.
+I refer to the new router as "server" or "Wireguard server" in the text.
 
 
 How it works:
@@ -21,25 +21,24 @@ It forwards and masquerades this traffic to destinations on your LAN,
 so you do not have to configure anything on your LAN hosts. Your LAN
 hosts will be totally unaware that they coverse with distant hosts.
 
-To make things work, you have to create a port forward rule (or destination NAT)
-on your existing router, and prepare a few other things:
+To make things work, you have to:
 
 - Prepare a client config on your client machine or at least generate
 private and public keys. You will need the client's public key soon.
 
-- Select a port for Wireguard to communicate. In this config I preset
-the default wireguard port, 51821.
+- Pick a port for Wireguard to communicate. In the config I sticked to
+the default wireguard port 51821.
 
-- You have to preselect an IP subnet for wireguard for communications that
+- You have to pick an IP subnet for wireguard for communications that
 differs from your LAN subnets on either end. I chose 172.16.0.0/24.
 Feel free to change it according to your needs.
 
 - Pick an IP address from the communications subnet for your Wireguard server.
-172.16.0.1/24 should be a good choice. Select the next available address
+172.16.0.1/24 should be a good choice. Use the next available address
 for your first peer (client), in our example it is 172.16.0.2/24.
 
-- Select a valid IP address on your LAN for your Wireguard server. In this
-configuration our LAN subnet is 192.168.10.0/24 and the chosen IP address
+- Select a valid IP address on your LAN for your Wireguard server. In the
+configuration the LAN subnet is 192.168.10.0/24 and the chosen IP address
 is 192.168.10.9/24.
 
 Please spot these sections and modify them or leave them as they are :
