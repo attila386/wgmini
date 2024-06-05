@@ -2,14 +2,14 @@
 Mini Wireguard Server
 
 The configuration below turns a small Mikrotik router e.g. an RB951Ui-2nD hAP
-into a cheap, easy to deploy, low power Wireguard server. We think it could be
+into a cheap, easy to deploy, low power Wireguard server. I think it could be
 useful in some scenarios, where no other options are available, e.g. the actual
 router is not wireguard or other VPN capable, and you do not want to replace it.
 
 Apply this config to a small Mikrotik router, connect it to your actual router
 with just one cable and you are good to go.
 
-We refer to this new router as "server" or "Wireguard server" in the text.
+I refer to this new router as "server" or "Wireguard server" in the text.
 
 
 How it works:
@@ -25,11 +25,11 @@ on your existing router, and prepare a few other things:
 - Prepare a client config on your client machine or at least generate
 private and public keys. You will need the client's public key soon.
 
-- Select a port for Wireguard to communicate. In this config we preset
+- Select a port for Wireguard to communicate. In this config I preset
 the default wireguard port, 51821.
 
 - You have to preselect an IP subnet for wireguard for communications that
-differs from your LAN subnets on either end. We chose 172.16.0.0/24.
+differs from your LAN subnets on either end. I chose 172.16.0.0/24.
 Feel free to change it according to your needs.
 
 - Pick an IP address from the communications subnet for your Wireguard server.
