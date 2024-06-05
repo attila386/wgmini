@@ -17,9 +17,9 @@ I refer to this new router as "server" or "Wireguard server" in the text.
 How it works:
 
 The Wireguard server receives traffic through your original router.
-It forwards this traffic to destinations on your LAN. It masquerades this
-traffic, so you do not have to configure anything on your LAN hosts.
-Your LAN hosts will be unaware that they coverse with distant hosts.
+It forwards and masquerades this traffic to destinations on your LAN,
+so you do not have to configure anything on your LAN hosts. Your LAN
+hosts will be totally unaware that they coverse with distant hosts.
 
 To make things work, you have to create a port forward rule (or destination NAT)
 on your existing router, and prepare a few other things:
