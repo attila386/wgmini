@@ -7,8 +7,9 @@ useful in some scenarios, where no other options are available, e.g. the actual
 router is not wireguard or other VPN capable, and you do not want to replace it
 for some reason.
 
-Apply this config to a small Mikrotik router, connect it to your actual router
-with just one cable and you are good to go.
+Configure a remote "road warrior" device (notebook or PC), apply this config to
+a small Mikrotik router, connect it to your actual router with just one cable, 
+and you are good to go.
 
 I refer to this new router as "server" or "Wireguard server" in the text.
 
@@ -18,7 +19,7 @@ How it works:
 The Wireguard server receives traffic through your original router.
 It forwards this traffic to destinations on your LAN. It masquerades this
 traffic, so you do not have to configure anything on your LAN hosts.
-Your LAN hosts will be unaware that they coversate with distant hosts.
+Your LAN hosts will be unaware that they coverse with distant hosts.
 
 To make things work, you have to create a port forward rule (or destination NAT)
 on your existing router, and prepare a few other things:
