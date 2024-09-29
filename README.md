@@ -94,4 +94,9 @@ add comment="Default gateway." disabled=no distance=1 dst-address=0.0.0.0/0 \
 
 Subject of interest : gateway
 
+----
+
+Last updated: 2024.09.29. 13:20
+
+----
 EOF
